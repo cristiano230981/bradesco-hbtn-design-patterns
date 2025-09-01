@@ -1,0 +1,23 @@
+A Arquitetura Hexagonal, também conhecida como Ports and Adapters, foi criada por Alistair Cockburn para deixar os sistemas mais firmes, maleáveis e livres de tecnologias específicas. O lance principal é separar o coração do programa – as regras do negócio – das partes de fora, tipo bancos de dados, telas e outros sistemas.
+
+Nessa arquitetura, o sistema gira em torno de portas e adaptadores. As portas são como interfaces que dizem quais serviços são oferecidos (portas de entrada) e quais são necessários (portas de saída). Já os adaptadores fazem a ligação entre essas portas e as tecnologias de fora, como programas, APIs ou bancos de dados. Essa separação deixa o coração do programa rodar sozinho, o que ajuda a fazer testes automáticos, usar o código de novo e trocar tecnologias sem mexer na lógica do negócio.
+
+Olha só as vantagens da Arquitetura Hexagonal:
+
+*   As coisas ficam bem organizadas e separadas, o que deixa o design mais limpo e fácil de manter.
+*   O sistema não fica preso a nenhuma ferramenta, então pode mudar sem problemas.
+*   Dá para testar o coração do programa sozinho, o que é bem mais fácil.
+*   Dá para usar o código de novo, porque o que é do negócio e o que é da estrutura estão bem separados.
+
+Apesar de ter coisas em comum com a Clean Architecture, como separar as partes e focar no negócio, a Arquitetura Hexagonal tem um jeito de mostrar e pensar diferente. A Clean Architecture usa círculos, e a Hexagonal usa um centro com lados, mostrando que a comunicação rola pelas portas e adaptadores. As duas acham importante inverter as dependências, mas não são a mesma coisa – cada uma tem suas particularidades e serve para situações diferentes.
+
+É bom saber que nem todo projeto precisa dessa arquitetura. Se o sistema for pequeno ou não precisar de muita manutenção, pode não valer a pena o esforço de usar a Arquitetura Hexagonal. Ela precisa de um bom planejamento e mais tempo no começo, o que pode ser besteira para soluções simples e rápidas.
+
+Antes de usar, pense em:
+
+*   O tamanho e a complicação do sistema
+*   Se ele vai mudar muito e precisar de manutenção
+*   Se precisa de testes automáticos
+*   Quantas tecnologias diferentes estão envolvidas
+
+Resumindo, a Arquitetura Hexagonal é uma mão na roda para construir sistemas que aguentam o tranco e crescem bem, principalmente quando é importante ter liberdade, poder testar as coisas e não depender de tecnologias específicas. Mas é bom pensar bem se vale a pena usar, dependendo do que você precisa para o projeto.
